@@ -1,0 +1,18 @@
+<div class="search-bar">
+  <input class="search-input" type="text" placeholder="Search pais..." [(ngModel)]="searchText1">
+  <button class="search-button" (click)="onSearch()" [disabled]="!searchText1">Search</button>
+</div>
+
+<div class="search-results" *ngIf="searchResults.length > 0">
+  <ul>
+    <li *ngFor="let result of searchResults">
+      <div class="search-result-item">
+        <button class="close-button" (click)="removeSearchResult(result)">X</button>
+        <img [src]="result.flags.png" alt="{{ result.name.common }} Flag" class="Flag" />
+        <h1>Name: {{ result.name.common }}</h1>
+        <h1>Capital: {{ result.capital }}</h1>
+        <h1>Population: {{ result.population }}</h1>
+      </div>
+    </li>
+  </ul>
+</div>

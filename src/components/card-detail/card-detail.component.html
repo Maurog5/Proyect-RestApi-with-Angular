@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="Paises" *ngIf="paises.length > 0">
+    <ul>
+      <li *ngFor="let pais of paises; let i = index" class="CountryItem" [ngClass]="{'CountryColumn': i % 4 === 0}">
+        <div>
+          <img [src]="pais.flags.png" alt="{{ pais.name.common }} Flag" class="Flag" />
+          <div class="CountryDetails">
+            <h1>{{ pais.name.common }}</h1>
+            <h3>Population: {{ pais.population }}</h3>
+            <h3>Capital: {{ pais.capital }}</h3>
+            <h4>Area: {{ pais.area }}</h4>
+            <h5>Region: {{ pais.region }}</h5>
+            
+            <!-- Agrega un botón de corazón con un icono -->
+            <button class="heart-button" (click)="toggleFavorite(pais)">
+              <i class="fa fa-heart" [ngClass]="{'favorited': pais.favorite}"></i>
+              ❤️
+            </button>
+            
+            <!-- Agrega un botón para abrir Google Maps -->
+            <button class="map-button" (click)="openGoogleMaps(pais.maps.googleMaps)">
+              Abrir Google Maps
+            </button>
+            
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="paises.length === 0">
+    <p>No se encontraron nombres de países.</p>
+  </div>
+</div>

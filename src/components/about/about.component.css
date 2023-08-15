@@ -1,0 +1,10 @@
+.about-content {
+
+background-color: rgb(44, 244, 18);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+}

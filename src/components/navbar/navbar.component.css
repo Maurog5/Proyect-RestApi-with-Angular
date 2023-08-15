@@ -1,0 +1,47 @@
+/* Estilos para dispositivos de pantalla grande */
+.navbar {
+  background-color: #9ec4bb; /* color navbar */
+  color: aliceblue;
+  padding: 10px 0;
+  border-radius: 5%;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 11;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+  color: yellow;
+}
+
+/* Estilos para dispositivos móviles y tablets */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 5px 0;
+    text-align: center; /* Centra el contenido en dispositivos pequeños */
+  }
+  
+  .nav-list {
+    flex-direction: column; /* Cambia la dirección a columna para dispositivos pequeños */
+    align-items: center; /* Centra los elementos en dispositivos pequeños */
+  }
+  
+  .nav-list li {
+    margin: 10px 0;
+  }
+}
