@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { IPais } from '../../app/models/pais.model';
 
 @Component({
   selector: 'app-card-detail',
@@ -7,18 +6,39 @@ import { IPais } from '../../app/models/pais.model';
   styleUrls: ['./card-detail.component.css']
 })
 export class CardDetailComponent {
-  @Input() paises: IPais[] = [];
+  @Input() paises: any[] = []; // Lista de países proporcionada desde el componente padre
+  itemsPerPage: number = 6;
+  currentPage: number = 1;
 
-  getGoogleMapsLink(googleMapsUrl: string): string {
-    return `https://www.google.com/maps/place/${encodeURIComponent(googleMapsUrl)}`;
-  }
-
-  openGoogleMaps(url: string) {
-    if (url) {
-      window.open(url, '_blank');
-    }
-  }
-  toggleFavorite(pais: IPais) {
+  toggleFavorite(pais: any) {
     pais.favorite = !pais.favorite;
+  }
+
+  openGoogleMaps(mapUrl: string) {
+    // Implementa la lógica para abrir Google Maps con la URL proporcionada
+  }
+
+  getPaginatedPaises(): any[] {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    return this.paises.slice(startIndex, endIndex);
+  }
+
+  onPageChange(page: number) {
+    this.currentPage = page;
+  }
+
+  totalPages(): number[] {
+    const itemsPerPage = 6; // Número de elementos por página
+    const total = Math.ceil(this.paises.length / itemsPerPage);
+    const maxPagesToShow = 10;
+  
+    if (total <= maxPagesToShow) {
+      return Array.from({ length: total }, (_, i) => i + 1);
+    } else {
+      const startPage = Math.max(1, this.currentPage - Math.floor(maxPagesToShow / 2));
+      const endPage = Math.min(total, startPage + maxPagesToShow - 1);
+      return Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
+    }
   }
 }

@@ -1,12 +1,44 @@
 .CountryPair {
   display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: flex-start; /* Alinear arriba */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card {
+  background-color: #f3c473;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Añadir margen inferior */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: flex-start; /* Alinear arriba */
+}
+
+.Paises {
+  text-align: center;
+  margin-top: 10px;
+  background-image: url("https://img.freepik.com/foto-gratis/tierra-galaxia-elementos-imagen-proporcionados-nasa_335224-750.jpg");
+  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-repeat: no-repeat;
+  background-position: center bottom; /* Ajusta la posición vertical */
+  color: aliceblue;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.CountryPair {
+  display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   width: 100%;
 }
 
-.card:hover {
-  background-color: #b5f373;
+.card {
+  background-color: #2c417b;
   margin-top: 10px;
   margin-top: auto;
   display: flex;
@@ -30,11 +62,10 @@
 
 
 .CountryItem {
-  background-image: url("https://img.freepik.com/vector-gratis/fondo-tierra-espacio_23-2147938172.jpg"); /*fondo tarjeta */
-  height: 1.1.1%;
+ background-color: #7465e6;
   display: flex;
   flex : 1;
-  border: 10px solid #d3ed7b;
+  border: 10px solid #060a2e;
   padding: 3px;
   width: calc(25% - 10px); /* Ancho de cada país (25% - 10px de margen) */
   margin: 2px 5px; /* Ajusta el margen */
@@ -56,13 +87,19 @@
   margin-top: 10px;
 }
 
+.CountryDetails {
+  background-color: #262948;
+  color: rgb(255, 255, 255);
+  padding: 3px;
+  text-align: center;
+  transition:  0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
 .CountryDetails:hover {
   background-color: #071f33;
-  color: rgb(255, 255, 255);
-  padding: 10px; /* Agregar espaciado interno */
-  text-align: center; /* Centrar el texto horizontalmente */
-  transition: opacity 0.3s ease-in-out;
+  padding: 10px;
 }
+
 /* Agrega estos estilos a tu archivo de estilos CSS */
 .heart-button:hover {
   border-radius: 10px;
@@ -72,5 +109,57 @@
   cursor: pointer;
   font-size: 50px;
 
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity  0.3s ease-in-out ;
+}
+
+
+/* Estilo para la lista de páginas */
+.pagination {
+  color: #605bdd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilo para los elementos de la lista de páginas */
+.page-item {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para el elemento de página activa */
+.page-item.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Estilo para los enlaces de página */
+.page-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Estilo para los enlaces de página cuando están deshabilitados */
+.page-link[aria-disabled="true"] {
+  color: #ccc;
+  pointer-events: none;
+}
+
+.pagination .page-link.active {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #81d056; /* Color de fondo */
+  color: white; /* Color del texto */
+  border-color: #007bff; /* Color del borde */
+}
+.col-12{
+  color: white;
+  padding: 2px;
+  background-color: #2c417b;
+  border-radius: 5px;
 }

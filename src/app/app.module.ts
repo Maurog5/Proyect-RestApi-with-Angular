@@ -28,6 +28,7 @@ import {  SearchBarComponent } from '../components/searchbar/searchbar.component
     CardDetailComponent,
     SearchBarComponent,
 
+
   
   ],
  
