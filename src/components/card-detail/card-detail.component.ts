@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { FavoritesService } from '../service/favorites-service/favorites-service.component'; // Importa el nuevo servicio
+import { IPais } from '../../app/models/pais.model';
 
 @Component({
   selector: 'app-card-detail',
@@ -6,19 +8,28 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./card-detail.component.css']
 })
 export class CardDetailComponent {
-  @Input() paises: any[] = []; // Lista de países proporcionada desde el componente padre
+  @Input() paises: IPais[] = []; // Usa el tipo IPais para la lista de países
   itemsPerPage: number = 6;
   currentPage: number = 1;
 
-  toggleFavorite(pais: any) {
-    pais.favorite = !pais.favorite;
+  constructor(private favoritesService: FavoritesService) {} // Inyecta el nuevo servicio
+
+  toggleFavorite(pais: IPais) {
+    pais.favorite = !pais.favorite; // Actualiza la propiedad 'favorite' en el país
+
+    // Llama al método addToFavorites o removeFromFavorites del servicio según el valor de 'favorite'
+    if (pais.favorite) {
+      this.favoritesService.addToFavorites(pais);
+    } else {
+      this.favoritesService.removeFromFavorites(pais);
+    }
   }
 
   openGoogleMaps(mapUrl: string) {
     // Implementa la lógica para abrir Google Maps con la URL proporcionada
   }
 
-  getPaginatedPaises(): any[] {
+  getPaginatedPaises(): IPais[] {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
     return this.paises.slice(startIndex, endIndex);
@@ -29,8 +40,7 @@ export class CardDetailComponent {
   }
 
   totalPages(): number[] {
-    const itemsPerPage = 6; // Número de elementos por página
-    const total = Math.ceil(this.paises.length / itemsPerPage);
+    const total = Math.ceil(this.paises.length / this.itemsPerPage);
     const maxPagesToShow = 10;
   
     if (total <= maxPagesToShow) {

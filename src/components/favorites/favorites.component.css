@@ -1,0 +1,56 @@
+/* favorites.component.css */
+
+.containerfavs {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.Flag {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.CountryDetails {
+  flex: 1;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.remove-button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}

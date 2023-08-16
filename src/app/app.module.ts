@@ -12,6 +12,8 @@ import { HomeComponent } from '../components/home/home.component';
 import { WelcomeComponent } from '../components/welcome/welcome.component';
 import { CardDetailComponent } from '../components/card-detail/card-detail.component';
 import {  SearchBarComponent } from '../components/searchbar/searchbar.component';
+import { FavoritesComponent } from '../components/favorites/favorites.component';
+import { FavoritesService } from '../components/service/favorites-service/favorites-service.component';
 
 
 
@@ -27,6 +29,8 @@ import {  SearchBarComponent } from '../components/searchbar/searchbar.component
     WelcomeComponent,
     CardDetailComponent,
     SearchBarComponent,
+    FavoritesComponent,
+   
 
 
   

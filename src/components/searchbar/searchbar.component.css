@@ -7,10 +7,10 @@
   }
   
   .search-input {
-  
+
     padding: 10px 80px;
     border: 1px solid #cd0e0e;
-    border-radius: 4px;
+    border-radius: 20px;
   }
   
   .search-button:hover {
@@ -37,4 +37,14 @@
   
   .close-button:hover {
     background-color: #ff3a3a;
+  }
+
+  /*aca va el alert */
+  .custom-alert {
+    background-color: #f00000;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
   }

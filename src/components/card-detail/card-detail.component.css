@@ -101,17 +101,21 @@
 }
 
 /* Agrega estos estilos a tu archivo de estilos CSS */
-.heart-button:hover {
-  border-radius: 10px;
-  background-color: #f90909;
-  padding: 10px;
+.heart-button {
   border: none;
+  background-color: transparent;
+  padding: 0;
   cursor: pointer;
-  font-size: 50px;
-
-  transition: opacity  0.3s ease-in-out ;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-right: 50px; /* Espacio entre el corazón y la información */
+  margin-left: -50%; 
 }
 
+.heart-button:hover {
+  transform: scale(1.2);
+  color: #f90909;
+}
 
 /* Estilo para la lista de páginas */
 .pagination {

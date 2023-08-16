@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PaisesService } from '../../components/service/paises.service';
-import { IPais } from '../../app/models/pais.model'
+import { IPais } from '../../app/models/pais.model';
 
 @Component({
   selector: 'app-searchbar',
@@ -23,8 +23,14 @@ export class SearchBarComponent implements OnInit {
         pais.name.common.toLowerCase().includes(this.searchText1.toLowerCase()) 
         
       );
+
+      // Mostrar alerta si no se encontraron resultados
+      if (this.searchResults.length === 0) {
+        window.alert('No se encontró ningún país con ese nombre.');
+      }
     });
   }
+
   removeSearchResult(result: IPais) {
     const index = this.searchResults.indexOf(result);
     if (index !== -1) {
