@@ -1,5 +1,6 @@
 export interface IPais {
   favorite: boolean;
+  
     name: {
       common: string;
       official: string;

@@ -12,6 +12,11 @@
         <h1>Name: {{ result.name.common }}</h1>
         <h1>Capital: {{ result.capital }}</h1>
         <h1>Population: {{ result.population }}</h1>
+        <!-- Agregar el botón de favoritos -->
+        <button class="heart-button" (click)="toggleFavorite(result)">
+          <i class="fa fa-heart" [ngClass]="{'favorited': result.favorite}"></i>
+          ❤️
+        </button>
       </div>
     </li>
   </ul>

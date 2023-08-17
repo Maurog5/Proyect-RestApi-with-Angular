@@ -11,15 +11,23 @@ export class FavoritesService {
 
   constructor() {}
 
-  addToFavorites(pais: IPais): void {
-    if (!this.favoritos.includes(pais)) {
-      this.favoritos.push(pais);
-      this.favoritosSubject.next([...this.favoritos]);
+  toggleFavorite(pais: IPais): void {
+    const index = this.favoritos.findIndex(f => f.name.common === pais.name.common);
+
+    if (index !== -1) {
+      this.removeFromFavorites(pais);
+    } else {
+      this.addToFavorites(pais);
     }
   }
 
+  addToFavorites(pais: IPais): void {
+    this.favoritos.push(pais);
+    this.favoritosSubject.next([...this.favoritos]);
+  }
+
   removeFromFavorites(pais: IPais): void {
-    const index = this.favoritos.indexOf(pais);
+    const index = this.favoritos.findIndex(f => f.name.common === pais.name.common);
     if (index !== -1) {
       this.favoritos.splice(index, 1);
       this.favoritosSubject.next([...this.favoritos]);

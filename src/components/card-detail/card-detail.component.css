@@ -106,16 +106,28 @@
   background-color: transparent;
   padding: 0;
   cursor: pointer;
-  font-size: 24px;
-  transition: transform 0.3s ease, color 0.3s ease;
-  margin-right: 50px; /* Espacio entre el corazón y la información */
+  font-size: 1.5em; /* Usamos 'em' para que el tamaño sea relativo */
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Agregamos border-color a la transición */
+  margin-right: 5%; /* Espacio entre el corazón y la información */
   margin-left: -50%; 
 }
 
 .heart-button:hover {
   transform: scale(1.2);
-  color: #f90909;
 }
+
+.fa-heart {
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
+  border: 3px solid transparent; 
+}
+
+
+
+.favorited-heart {
+
+  border-color: #f90909; /* Color del borde cuando está marcado como favorito */
+}
+
 
 /* Estilo para la lista de páginas */
 .pagination {

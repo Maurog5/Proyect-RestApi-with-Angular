@@ -13,7 +13,7 @@
             
             <!-- Agrega un botón de corazón con un icono -->
             <button class="heart-button" (click)="toggleFavorite(pais)">
-              <i class="fa fa-heart" [ngClass]="{'favorited': pais.favorite}"></i>
+              <i class="fa fa-heart" [ngClass]="{'favorited': pais.favorite, 'favorited-heart': pais.favorite}"></i>
               ❤️
             </button>
             
