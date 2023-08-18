@@ -1,3 +1,9 @@
+.search-result-item h1 {
+  font-family: 'Inconsolata', monospace;
+
+}
+
+
 .search-bar {
   justify-content: center;
     display: flex;
@@ -33,18 +39,38 @@
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s;
+    margin-left: -18px;
   }
   
   .close-button:hover {
     background-color: #ff3a3a;
   }
 
-  /*aca va el alert */
-  .custom-alert {
-    background-color: #f00000;
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 4px;
-    font-family: Arial, sans-serif;
+  
+  .heart-button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 2em; /* Usamos 'em' para que el tamaño sea relativo */
+    transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Agregamos border-color a la transición */
+    
   }
+  
+  .heart-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .fa-heart {
+    transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
+    border: 3px solid transparent; 
+    margin-left: -18px;
+  }
+  
+  
+  
+  .favorited-heart {
+  
+    border-color: #f90909; /* Color del borde cuando está marcado como favorito */
+  }
+ 

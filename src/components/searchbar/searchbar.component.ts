@@ -39,5 +39,10 @@ export class SearchBarComponent implements OnInit {
   toggleFavorite(pais: IPais) {
     pais.favorite = !pais.favorite;
     this.favoritesService.toggleFavorite(pais);
+    if (pais.favorite) {
+      window.alert(`¡${pais.name.common} se ha añadido a tus favoritos!`);
+    } else {
+      window.alert(`¡${pais.name.common} ya no está en tus favoritos!`);
+    }
   }
 }

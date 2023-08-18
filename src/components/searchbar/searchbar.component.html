@@ -7,16 +7,25 @@
   <ul>
     <li *ngFor="let result of searchResults">
       <div class="search-result-item">
-        <button class="close-button" (click)="removeSearchResult(result)">X</button>
-        <img [src]="result.flags.png" alt="{{ result.name.common }} Flag" class="Flag" />
-        <h1>Name: {{ result.name.common }}</h1>
-        <h1>Capital: {{ result.capital }}</h1>
-        <h1>Population: {{ result.population }}</h1>
-        <!-- Agregar el botón de favoritos -->
+        <div class="button-container">
+          <button class="close-button" (click)="removeSearchResult(result)">X</button>
+        </div>
         <button class="heart-button" (click)="toggleFavorite(result)">
           <i class="fa fa-heart" [ngClass]="{'favorited': result.favorite}"></i>
           ❤️
         </button>
+        <img [src]="result.flags.png" alt="{{ result.name.common }} Flag" class="Flag" />
+        <h1>Name: {{ result.name.common }}</h1>
+        <h1>Capital: {{ result.capital }}</h1>
+        <h1>Population: {{ result.population }}</h1>
+        <h1>Region: {{ result.region }}</h1>
+        <h1>Area: {{ result.area }}</h1>
+        <h1>Moneda:</h1>
+        <ul>
+          <li *ngFor="let currency of result.currencies | keyvalue">
+            {{ currency.key }} - {{ currency.value.name }} ({{ currency.value.symbol }})
+          </li>
+        </ul>
       </div>
     </li>
   </ul>

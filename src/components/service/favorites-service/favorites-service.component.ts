@@ -13,6 +13,7 @@ export class FavoritesService {
 
   toggleFavorite(pais: IPais): void {
     const index = this.favoritos.findIndex(f => f.name.common === pais.name.common);
+    const favoritosData = localStorage.getItem('favoritos');
 
     if (index !== -1) {
       this.removeFromFavorites(pais);

@@ -1,9 +1,10 @@
-<body>
+
+<div class="page-container">
 
   <div class="containerfavs">
     <h2>Mis Países Favoritos</h2>
     <ul>
-     
+      
       <li *ngFor="let pais of favoritos">
         <div>
           <img [src]="pais.flags.png" alt="{{ pais.name.common }} Flag" class="Flag" />
@@ -19,4 +20,5 @@
     </ul>
   </div>
   
-</body>
+  
+</div>

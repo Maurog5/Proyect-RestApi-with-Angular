@@ -11,7 +11,7 @@ export interface IPais {
         };
       };
     };
-    // ... otras propiedades ...
+   
     flags: {
       png: string;
       svg: string;
@@ -23,8 +23,14 @@ export interface IPais {
     region: string;
     
     maps: {
-      googleMaps: string; 
+      googleMaps: string;
       openStreetMaps: string;
-      
     };
+    currencies: {
+      [code: string]: {
+        name: string;
+        symbol: string;
+      };
+    };
+  
   }

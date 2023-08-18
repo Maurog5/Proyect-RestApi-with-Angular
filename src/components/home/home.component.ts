@@ -12,6 +12,7 @@ export class HomeComponent  {
   title: string;
   paises: IPais[] = [];
   isAboutRoute: boolean = false;
+  searchText1: string = '';
 
   constructor(private paisesService: PaisesService) {
     this.title = "Hola estoy en Angular ";
@@ -24,6 +25,8 @@ export class HomeComponent  {
           capital: pais.capital,
           area: pais.area,
           region: pais.region,
+          maps: pais.maps,
+          currencies: pais.currencies,
         }));
       },
       (error) => {

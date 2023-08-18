@@ -14,6 +14,7 @@ import { CardDetailComponent } from '../components/card-detail/card-detail.compo
 import {  SearchBarComponent } from '../components/searchbar/searchbar.component';
 import { FavoritesComponent } from '../components/favorites/favorites.component';
 import { FavoritesService } from '../components/service/favorites-service/favorites-service.component';
+import { PaginadoComponent } from '../components/paginado/paginado.component';
 
 
 
@@ -30,6 +31,7 @@ import { FavoritesService } from '../components/service/favorites-service/favori
     CardDetailComponent,
     SearchBarComponent,
     FavoritesComponent,
+    PaginadoComponent,
    
 
 

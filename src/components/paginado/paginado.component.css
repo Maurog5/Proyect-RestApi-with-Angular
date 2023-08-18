@@ -1,0 +1,57 @@
+/* Estilo para la lista de páginas */
+.row {
+  padding: 2px;
+  border-radius: 20px;
+  background-color: #384b89;
+}
+/* Estilo para la lista de páginas */
+.pagination {
+  color: #dd5b5b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilo para los elementos de la lista de páginas */
+.page-item {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para el elemento de página activa */
+.page-item.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* Estilo para los enlaces de página */
+.page-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Estilo para los enlaces de página cuando están deshabilitados */
+.page-link[aria-disabled="true"] {
+  color: #ccc;
+  pointer-events: none;
+}
+
+.pagination .page-link.active {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #81d056; /* Color de fondo */
+  color: white; /* Color del texto */
+  border-color: #ff0000; /* Color del borde */
+
+}
+.col-12{
+  color: white;
+  padding: 2px;
+  background-color: #2c417b;
+  border-radius: 5px;
+}

@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { FavoritesService } from '../service/favorites-service/favorites-service.component'; // Importa el nuevo servicio
+import { FavoritesService } from '../service/favorites-service/favorites-service.component';
 import { IPais } from '../../app/models/pais.model';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-card-detail',
@@ -8,16 +9,15 @@ import { IPais } from '../../app/models/pais.model';
   styleUrls: ['./card-detail.component.css']
 })
 export class CardDetailComponent {
-  @Input() paises: IPais[] = []; // Usa el tipo IPais para la lista de países
+  @Input() paises: IPais[] = [];
   itemsPerPage: number = 6;
   currentPage: number = 1;
 
-  constructor(private favoritesService: FavoritesService) {} // Inyecta el nuevo servicio
+  constructor(private favoritesService: FavoritesService, private sanitizer: DomSanitizer) {}
 
   toggleFavorite(pais: IPais) {
-    pais.favorite = !pais.favorite; // Actualiza la propiedad 'favorite' en el país
+    pais.favorite = !pais.favorite;
 
-    // Llama al método addToFavorites o removeFromFavorites del servicio según el valor de 'favorite'
     if (pais.favorite) {
       this.favoritesService.addToFavorites(pais);
     } else {
@@ -25,8 +25,12 @@ export class CardDetailComponent {
     }
   }
 
-  openGoogleMaps(mapUrl: string) {
-    // Implementa la lógica para abrir Google Maps con la URL proporcionada
+  openGoogleMaps(mapUrl: string | undefined) {
+    if (mapUrl) {
+      window.open(mapUrl, '_blank');
+    } else {
+      console.error('URL de mapa no definida para el país seleccionado.');
+    }
   }
 
   getPaginatedPaises(): IPais[] {

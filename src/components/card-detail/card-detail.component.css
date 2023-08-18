@@ -129,53 +129,20 @@
 }
 
 
-/* Estilo para la lista de páginas */
-.pagination {
-  color: #605bdd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
 
-/* Estilo para los elementos de la lista de páginas */
-.page-item {
-  margin: 0 5px;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Estilo para el elemento de página activa */
-.page-item.active {
-  background-color: #007bff;
+.map-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
   color: #fff;
-  border-color: #007bff;
+  background-color: #1a237e; /* Color azul oscuro */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: -400px;
 }
 
-/* Estilo para los enlaces de página */
-.page-link {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-/* Estilo para los enlaces de página cuando están deshabilitados */
-.page-link[aria-disabled="true"] {
-  color: #ccc;
-  pointer-events: none;
-}
-
-.pagination .page-link.active {
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #81d056; /* Color de fondo */
-  color: white; /* Color del texto */
-  border-color: #007bff; /* Color del borde */
-}
-.col-12{
-  color: white;
-  padding: 2px;
-  background-color: #2c417b;
-  border-radius: 5px;
+.map-button:hover {
+  background-color: #0d47a1; /* Color azul oscuro más claro al pasar el cursor */
 }
