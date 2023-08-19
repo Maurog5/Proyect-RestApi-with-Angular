@@ -6,28 +6,24 @@
 }
 /* Estilo para la lista de páginas */
 .pagination {
-  color: #dd5b5b;
+  color: #384b89;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+ 
 }
 
 /* Estilo para los elementos de la lista de páginas */
 .page-item {
   margin: 0 5px;
-  padding: 5px 10px;
+  padding: 5px 5px 5px 5px; /* Ajusta el padding para hacer los botones más grandes */
   border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 16px; /* Ajusta el tamaño de la fuente para los números */
 }
 
-/* Estilo para el elemento de página activa */
-.page-item.active {
-  background-color: #007bff;
-  color: #fff;
-  border-color: #007bff;
-}
 
 /* Estilo para los enlaces de página */
 .page-link {
@@ -44,9 +40,9 @@
 .pagination .page-link.active {
   border-radius: 5px;
   padding: 5px;
-  background-color: #81d056; /* Color de fondo */
+  background-color: #80dd4e; /* Color de fondo */
   color: white; /* Color del texto */
-  border-color: #ff0000; /* Color del borde */
+ 
 
 }
 .col-12{

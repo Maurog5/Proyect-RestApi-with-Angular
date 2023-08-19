@@ -24,7 +24,7 @@ export class SearchBarComponent implements OnInit {
       );
 
       if (this.searchResults.length === 0) {
-        window.alert('No se encontró ningún país con ese nombre.');
+        window.alert('No country with that name found.');
       }
     });
   }

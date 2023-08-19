@@ -1,24 +1,18 @@
-
 <div class="page-container">
-
   <div class="containerfavs">
-    <h2>Mis Países Favoritos</h2>
-    <ul>
-      
-      <li *ngFor="let pais of favoritos">
-        <div>
+    <h2 class="title">Mis Países Favoritos</h2>
+    <div class="cards-container">
+      <div class="country-item" *ngFor="let pais of favoritos">
+        <div class="card-content">
           <img [src]="pais.flags.png" alt="{{ pais.name.common }} Flag" class="Flag" />
           <div class="CountryDetails">
             <h1>{{ pais.name.common }}</h1>
             <h3>Population: {{ pais.population }}</h3>
             <h3>Capital: {{ pais.capital }}</h3>
-            <!-- Agregar otros detalles si es necesario -->
             <button class="remove-button" (click)="removeFromFavorites(pais)">Eliminar de Favoritos</button>
           </div>
         </div>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
-  
-  
 </div>
