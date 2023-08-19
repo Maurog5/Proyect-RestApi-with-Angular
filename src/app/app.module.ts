@@ -13,8 +13,9 @@ import { WelcomeComponent } from '../components/welcome/welcome.component';
 import { CardDetailComponent } from '../components/card-detail/card-detail.component';
 import {  SearchBarComponent } from '../components/searchbar/searchbar.component';
 import { FavoritesComponent } from '../components/favorites/favorites.component';
-import { FavoritesService } from '../components/service/favorites-service/favorites-service.component';
 import { PaginadoComponent } from '../components/paginado/paginado.component';
+import { CreateCountryComponent} from '../components/create-country/create-country.component';
+import { CountryServiceComponent } from '../components/service/country-service/country-service.component';
 
 
 
@@ -32,6 +33,8 @@ import { PaginadoComponent } from '../components/paginado/paginado.component';
     SearchBarComponent,
     FavoritesComponent,
     PaginadoComponent,
+    CreateCountryComponent,
+    CountryServiceComponent,
    
 
 

@@ -1,4 +1,18 @@
-/* Estilos para dispositivos de pantalla grande */
+/* boton para volver */
+button { 
+  width: 150px;
+  background-color: #dbeafa;
+  color: rgb(0, 0, 0); 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #cceb1b; 
+}
+
 .navbar {
   background-color: #384b89; /* color navbar */
   color: aliceblue;
