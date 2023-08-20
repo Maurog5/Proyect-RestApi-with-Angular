@@ -1,7 +1,64 @@
-.container-create{
-    background-color: black;
-    color: aqua;
-    
+.cont-page {
+  background-color: rgb(31, 33, 88);
+  color: aliceblue;
+  width: 100%;
+  min-height: 100vh;
 }
 
-  
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(147, 82, 24, 0.8);
+  border-radius: 10px;
+}
+
+.flex-outer {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-outer li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li input,
+.flex-outer li textarea {
+  flex: 1;
+  padding: 8px;
+}
+
+.flex-outer li label {
+  font-weight: 300;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.flex-outer li input,
+.flex-outer li textarea {
+  padding: 15px;
+  border: none;
+  background-color: #f2f2f2;
+  color: #333;
+  border-radius: 5px;
+}
+
+.flex-outer li button {
+  padding: 8px 16px;
+  border: none;
+  background: #32742f;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.title{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+   
+}

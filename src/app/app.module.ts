@@ -15,8 +15,10 @@ import {  SearchBarComponent } from '../components/searchbar/searchbar.component
 import { FavoritesComponent } from '../components/favorites/favorites.component';
 import { PaginadoComponent } from '../components/paginado/paginado.component';
 import { CreateCountryComponent} from '../components/create-country/create-country.component';
-import { CountryServiceComponent } from '../components/service/country-service/country-service.component';
+import { CountryServiceComponent } from '../components/service/country-service/country-service.component'; // Importa el servicio correcto
 
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -34,7 +36,7 @@ import { CountryServiceComponent } from '../components/service/country-service/c
     FavoritesComponent,
     PaginadoComponent,
     CreateCountryComponent,
-    CountryServiceComponent,
+    
    
 
 
@@ -48,11 +50,13 @@ import { CountryServiceComponent } from '../components/service/country-service/c
      HttpClientModule,
      AppRoutingModule,
      RouterModule,
-  
+     ReactiveFormsModule,
   ],
 
 
-  providers: [],
+  providers: [
+    CountryServiceComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

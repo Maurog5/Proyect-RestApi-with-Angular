@@ -1,4 +1,25 @@
-<div class="ala">
-
-    <p>create-asdasdasdsa!</p>
-</div>
+<div class="cont-page">
+    <h1 class="title"> CREATE YOUR COUNTRY </h1> 
+    <div class="container">
+      <form [formGroup]="countryForm" (ngSubmit)="createCountry()">
+        <ul class="flex-outer">
+          <li>
+            <label for="name">Name</label>
+            <input type="text" id="name" formControlName="name" placeholder="Enter your pais here">
+          </li>
+          <li>
+            <label for="capital">Capital</label>
+            <input type="text" id="capital" formControlName="capital" placeholder="Enter your capital here">
+          </li>
+          <li>
+            <label for="region">Region</label>
+            <input type="text" id="region" formControlName="region" placeholder="Enter your region here">
+          </li>
+          <li>
+            <button type="submit">Submit</button>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+  
