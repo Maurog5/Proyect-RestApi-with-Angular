@@ -13,11 +13,15 @@
         </li>
         <li class="list-group-item bg-dark">
           <label for="population" class="text-white">Population</label>
-          <input type="text" id="population" formControlName="population" class="form-control" placeholder="Enter your population here">
+          <input type="number" id="population" formControlName="population" class="form-control" placeholder="Enter your population here">
         </li>
         <li class="list-group-item bg-dark">
           <label for="image" class="text-white">Image</label>
           <input type="file" id="image" (change)="onImageChange($event)" accept="image/*" class="form-control-file">
+        </li>
+        <li class="list-group-item bg-dark">
+          <label class="text-white">selected image:</label>
+          <img *ngIf="selectedImage" [src]="selectedImageURL" alt="Imagen seleccionada">
         </li>
         <li class="list-group-item bg-dark">
           <button type="submit" class="btn btn-light" #submitButton>Submit</button>

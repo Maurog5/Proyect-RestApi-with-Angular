@@ -69,9 +69,19 @@ export class CreateCountryComponent {
   }
 
 
+
+  
+  selectedImageURL: string | null = null;
+  
   onImageChange(event: any): void {
     const file: File = event.target.files[0];
     this.selectedImage = file;
+  
+    if (this.selectedImage) {
+      this.selectedImageURL = URL.createObjectURL(this.selectedImage);
+    } else {
+      this.selectedImageURL = null;
+    }
   }
 
   createCountry(): void {

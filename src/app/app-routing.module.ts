@@ -5,6 +5,7 @@ import {HomeComponent} from '../components/home/home.component'
 import { WelcomeComponent} from '../components/welcome/welcome.component'
 import { FavoritesComponent } from 'src/components/favorites/favorites.component';
 import { CreateCountryComponent} from '../components/create-country/create-country.component'
+
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' }, // Ruta raíz redirige a '/home'
   { path: 'welcome', component: WelcomeComponent },

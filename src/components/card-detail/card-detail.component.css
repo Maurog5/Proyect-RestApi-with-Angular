@@ -1,28 +1,28 @@
 .CountryPair {
   display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: flex-start; /* Alinear arriba */
+  justify-content: center; 
+  align-items: flex-start; 
   margin-bottom: 20px;
   width: 100%;
 }
 .card {
   background-color: #f3c473;
-  margin-top: 5px; /* Reduce el margen superior */
-  margin-bottom: 5px; /* Reduce el margen inferior */
-  padding: 0px; /* Reduce el padding */
+  margin-top: 5px; 
+  margin-bottom: 5px; 
+  padding: 0px; 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: flex-start; /* Alinear arriba */
+  justify-content: center; /* Esto lo va a Centrar horizontalmente */
+  align-items: flex-start; /* Alinea para  arriba */
 }
 
 .Paises {
   text-align: center;
   margin-top: 10px;
   background-image: url("https://img.freepik.com/foto-gratis/tierra-galaxia-elementos-imagen-proporcionados-nasa_335224-750.jpg");
-  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-size: cover; 
   background-repeat: no-repeat;
-  background-position: center bottom; /* Ajusta la posición vertical */
+  background-position: center bottom; 
   color: aliceblue;
   width: 100%;
   display: flex;
@@ -50,9 +50,9 @@
   text-align: center;
   margin-top: 10px;
   background-color: #88b8a9;
-  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-size: cover; 
   background-repeat: no-repeat;
-  background-position: center bottom; /* Ajusta la posición vertical */
+  background-position: center bottom;
   color: aliceblue;
   width: 100%;
   display: flex;  
@@ -69,7 +69,7 @@
   border: 10px solid #060a2e;
   padding: 3px;
   width: calc(25% - 10px);/* Ancho de cada país (25% - 10px de margen) */
-  margin: 1px 4px; /* Ajusta el margen */
+  margin: 1px 4px; 
   display: inline-block;
   flex-direction: column;
   justify-content: space-between;
@@ -140,7 +140,7 @@ h5 {
 }
 
 .fa-heart {
-  transition: transform 0.3s ease, border-color 0.3s ease; /* Elimina la transición de color */
+  transition: transform 0.3s ease, border-color 0.3s ease; 
   border: 3px solid transparent;
 }
 

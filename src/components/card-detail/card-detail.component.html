@@ -13,13 +13,13 @@
            
             
             
-            <!-- Agrega un botón de corazón con un icono -->
+         
             <button class="heart-button" (click)="toggleFavorite(pais)">
               <i class="fa fa-heart" [ngClass]="{'favorited': pais.favorite, 'favorited-heart': pais.favorite}"></i>
               ❤️
             </button>
             
-            <!-- Agrega un botón para abrir Google Maps -->
+          
             <button class="map-button" (click)="openGoogleMaps(pais.maps.googleMaps)">
               Open Google Maps
             </button>

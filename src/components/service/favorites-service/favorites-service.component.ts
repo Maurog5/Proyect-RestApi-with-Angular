@@ -44,4 +44,10 @@ export class FavoritesService {
   getFavorites(): IPais[] {
     return this.favoritos;
   }
+
+  updateFavorites(favoritos: IPais[]): void {
+    this.favoritos = favoritos;
+    this.saveToLocalStorage();
+  }
+  
 }
