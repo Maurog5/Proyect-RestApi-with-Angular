@@ -68,7 +68,7 @@
   flex: 1;
   border: 10px solid #060a2e;
   padding: 3px;
-  width: calc(25% - 15px);/* Ancho de cada país (25% - 10px de margen) */
+  width: calc(25% - 10px);/* Ancho de cada país (25% - 10px de margen) */
   margin: 1px 4px; /* Ajusta el margen */
   display: inline-block;
   flex-direction: column;
@@ -80,6 +80,7 @@
   margin-right: 10px;
   margin-bottom: 10px;
   margin-left: 10px;
+ 
 }
 
 
@@ -87,10 +88,11 @@
 
 .Flag {
   border-radius: 5px;
-  width: 70%;
+  width: 50%;
   height: 100px; /* Cambia la altura de las banderas */
   margin-top: 10px;
 }
+
 
 .CountryDetails {
   background-color: #262948;
@@ -99,11 +101,25 @@
   text-align: center;
   transition:  0.5s ease-in-out, padding 0.5s ease-in-out;
   font-size: 12px;
+  
+}
+h1 {
+ font-size: 20px;
+}
+h3 {
+  font-size: 15px;
+}
+h4 {
+  font-size: 15px;
+}
+h5 {
+  font-size: 15px;
 }
 
 .CountryDetails:hover {
   background-color: #071f33;
   padding: 10px;
+ 
 }
 
 

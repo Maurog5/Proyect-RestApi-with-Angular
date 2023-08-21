@@ -7,35 +7,41 @@ import { IPais } from '../../../app/models/pais.model';
 })
 export class FavoritesService {
   private favoritos: IPais[] = [];
-  private favoritosSubject = new BehaviorSubject<IPais[]>(this.favoritos);
 
-  constructor() {}
+  constructor() {
+    const favoritosData = localStorage.getItem('favoritos');
+    if (favoritosData) {
+      this.favoritos = JSON.parse(favoritosData);
+    }
+  }
 
+  private saveToLocalStorage(): void {
+    localStorage.setItem('favoritos', JSON.stringify(this.favoritos));
+  }
   toggleFavorite(pais: IPais): void {
     const index = this.favoritos.findIndex(f => f.name.common === pais.name.common);
-    const favoritosData = localStorage.getItem('favoritos');
-
     if (index !== -1) {
-      this.removeFromFavorites(pais);
+      this.favoritos.splice(index, 1);
     } else {
-      this.addToFavorites(pais);
+      this.favoritos.push(pais);
     }
+    this.saveToLocalStorage();
   }
 
   addToFavorites(pais: IPais): void {
     this.favoritos.push(pais);
-    this.favoritosSubject.next([...this.favoritos]);
+    this.saveToLocalStorage();
   }
 
   removeFromFavorites(pais: IPais): void {
     const index = this.favoritos.findIndex(f => f.name.common === pais.name.common);
     if (index !== -1) {
       this.favoritos.splice(index, 1);
-      this.favoritosSubject.next([...this.favoritos]);
+      this.saveToLocalStorage();
     }
   }
 
-  getFavorites(): BehaviorSubject<IPais[]> {
-    return this.favoritosSubject;
+  getFavorites(): IPais[] {
+    return this.favoritos;
   }
 }

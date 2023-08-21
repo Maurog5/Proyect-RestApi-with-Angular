@@ -12,10 +12,14 @@
             <input type="text" id="capital" formControlName="capital" placeholder="Enter your capital here">
           </li>
           <li>
-            <label for="region">Region</label>
-            <input type="text" id="region" formControlName="region" placeholder="Enter your region here">
+              <label for="population">Population</label>
+            <input type="text" id="population" formControlName="population" placeholder="Enter your population here">
           </li>
           <li>
+          </li>
+          <li>
+            <label for="image">Image</label>
+            <input type="file" id="image" (change)="onImageChange($event)" accept="image/*">
             <button type="submit">Submit</button>
           </li>
         </ul>

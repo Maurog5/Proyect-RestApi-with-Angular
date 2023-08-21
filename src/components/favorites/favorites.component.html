@@ -1,15 +1,15 @@
 <div class="page-container">
   <div class="containerfavs">
-    <h2 class="title">Mis Países Favoritos</h2>
+    <h2 class="title">My favorite countries</h2>
     <div class="cards-container">
       <div class="country-item" *ngFor="let pais of favoritos">
         <div class="card-content">
           <img [src]="pais.flags.png" alt="{{ pais.name.common }} Flag" class="Flag" />
           <div class="CountryDetails">
             <h1>{{ pais.name.common }}</h1>
-            <h3>Population: {{ pais.population }}</h3>
             <h3>Capital: {{ pais.capital }}</h3>
-            <button class="remove-button" (click)="removeFromFavorites(pais)">Eliminar de Favoritos</button>
+            <h3>Population: {{ pais.population }}</h3>
+            <button class="remove-button" (click)="removeFromFavorites(pais)">Delete favorite</button>
           </div>
         </div>
       </div>

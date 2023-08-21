@@ -13,13 +13,11 @@ export class FavoritesComponent implements OnInit {
   constructor(private favoritesService: FavoritesService) {}
 
   ngOnInit(): void {
-    // Suscríbete a los cambios en la lista de favoritos
-    this.favoritesService.getFavorites().subscribe(favoritos => {
-      this.favoritos = favoritos;
-    });
+    this.favoritos = this.favoritesService.getFavorites();
   }
 
   removeFromFavorites(pais: IPais): void {
-    this.favoritesService.removeFromFavorites(pais); // Llama al método del servicio para eliminar de favoritos
+    this.favoritesService.removeFromFavorites(pais);
+    this.favoritos = this.favoritesService.getFavorites(); 
   }
 }

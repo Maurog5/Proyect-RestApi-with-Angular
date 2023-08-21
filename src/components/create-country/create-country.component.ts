@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CountryServiceComponent } from '../service/country-service/country-service.component';
-import { FavoritesService } from '../service/favorites-service/favorites-service.component'; // Importa el servicio FavoritesService
+import { FavoritesService } from '../service/favorites-service/favorites-service.component';
 import { IPais } from '../../app/models/pais.model';
 
 @Component({
@@ -12,32 +12,44 @@ import { IPais } from '../../app/models/pais.model';
 })
 export class CreateCountryComponent {
   countryForm: FormGroup;
+  selectedImage: File | null = null;
 
   constructor(
     private fb: FormBuilder,
     private countryService: CountryServiceComponent,
-    private favoritesService: FavoritesService, // Agrega el servicio FavoritesService
+    private favoritesService: FavoritesService,
     private router: Router
   ) {
     this.countryForm = this.fb.group({
       name: ['', Validators.required],
       capital: [''],
-      region: ['']
+      population: ['']
     });
+  }
+
+  onImageChange(event: any): void {
+    const file: File = event.target.files[0];
+    this.selectedImage = file;
   }
 
   createCountry(): void {
     const newCountry: IPais = this.countryForm.value;
-    this.countryService.addCountry(newCountry); // Agrega el país al servicio CountryServiceComponent
 
-    // Agrega el país al servicio FavoritesService
+    if (this.selectedImage) {
+      const imageUrl = URL.createObjectURL(this.selectedImage);
+      newCountry.flags = {
+        png: imageUrl,
+        svg: '',
+        alt: ''  
+      };
+    }
+  
+    this.countryService.addCountry(newCountry);
     this.favoritesService.addToFavorites(newCountry);
-
+  
     this.countryForm.reset();
-  
-    // Mostrar un alert cuando el país se crea correctamente
+    this.selectedImage = null;
     alert('País creado exitosamente');
-  
     this.router.navigate(['/favorites']);
   }
 }

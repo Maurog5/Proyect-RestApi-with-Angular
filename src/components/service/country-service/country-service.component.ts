@@ -5,13 +5,12 @@ import { IPais } from '../../../app/models/pais.model'; // Importa el modelo de 
   providedIn: 'root'
 })
 export class CountryServiceComponent {
-  private countries: IPais[] = []; // Aquí almacenaremos los países
-
+  private countries: IPais[] = []; //para almacernar los paises 
   constructor() { }
 
   addCountry(country: IPais): void {
-    this.countries.push(country); // Agregar el país a la lista
+    this.countries.push(country); 
   }
 
-  // Agrega métodos adicionales según sea necesario, por ejemplo para obtener los países favoritos, etc.
+  
 }

@@ -1,10 +1,14 @@
 /* boton para volver */
 button { 
+  position: fixed; 
+  left: 10px; 
+  top: 2%; 
+  
   width: 150px;
   background-color: #dbeafa;
   color: rgb(0, 0, 0); 
   border: none;
-  padding: 10px 20px;
+  padding: 5px 5px 5px 5px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -14,9 +18,13 @@ button:hover {
 }
 
 .navbar {
+  
+  display: flex;
+  justify-content:center;
+  align-items: center;
   background-color: #384b89; /* color navbar */
   color: aliceblue;
-  padding: 5px 0;
+  padding: 20px 0;
   border-radius: 5%;
 }
 

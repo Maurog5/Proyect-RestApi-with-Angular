@@ -1,33 +1,34 @@
 /* Estilo para la lista de páginas */
 .row {
-  padding: 2px;
-  border-radius: 20px;
+  padding: 1px;
+  border-radius: 10px;
   background-color: #384b89;
 }
 /* Estilo para la lista de páginas */
 .pagination {
-  color: #384b89;
+  color: #000000;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
  
 }
 
 /* Estilo para los elementos de la lista de páginas */
 .page-item {
-  margin: 0 5px;
+  margin: 0 3px;
   padding: 5px 5px 5px 5px; /* Ajusta el padding para hacer los botones más grandes */
-  border: 1px solid #ccc;
-  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; /* Ajusta el tamaño de la fuente para los números */
+  font-size: 14px; /* Ajusta el tamaño de la fuente para los números */
+
 }
 
 
 /* Estilo para los enlaces de página */
 .page-link {
-  color: #ffffff;
+  padding: 3px 3px 3px 3px;
+  border-radius: 4px;
+  color: #0b0a0a;
   text-decoration: none;
 }
 
@@ -35,19 +36,14 @@
 .page-link[aria-disabled="true"] {
   color: #ccc;
   pointer-events: none;
+
 }
 
 .pagination .page-link.active {
-  border-radius: 5px;
-  padding: 5px;
+  border-radius: 40px;
+  padding: 2px 2px 2px 2px;
   background-color: #80dd4e; /* Color de fondo */
-  color: white; /* Color del texto */
+  color: rgb(14, 11, 11); /* Color del texto */
  
 
-}
-.col-12{
-  color: white;
-  padding: 2px;
-  background-color: #2c417b;
-  border-radius: 5px;
 }

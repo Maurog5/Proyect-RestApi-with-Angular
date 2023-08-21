@@ -1,7 +1,7 @@
 /* En el archivo welcome.component.css */
 
 .landingPage {
-    background-color: #0f0e0e;
+    background-image: url("https://previews.123rf.com/images/eyematrix/eyematrix1708/eyematrix170800023/85035691-banderas-de-colores-de-la-ilustraci%C3%B3n-de-fondo-del-mundo.jpg");
     background-size: cover; /* Ajustar la imagen para cubrir toda la pantalla */
     background-position: center; /* Centrar la imagen */
     height: 100vh;
@@ -12,18 +12,23 @@
     justify-content: center;
   }
   .landing__box {
+    background-color: #634646f5;
     padding: 1.5rem;
     border-radius: 1rem;
-    background-color: rgba(182, 229, 112, 0.4);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(2px);
   }
   
   .landing__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: black;
+    color: rgb(255, 255, 255);
     margin: 0;
+    font-size: 25px;
     padding: 0;
+  
   }
   
   .landing__button {
@@ -31,7 +36,7 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: bolder;
-    background-color: #0f0e0e;
+    background-color: #94a36d;
     border: none;
     border-radius: .8rem;
     margin-top: 2rem;

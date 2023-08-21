@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   color: rgb(181, 209, 235);
+  font-size: 26px;
 
 }
 .page-container {
@@ -36,15 +37,16 @@
   background-color: #d18a50;
   border: 1px solid #6076a8;
   border-radius: 10px; /* Aumenta el radio del borde */
-  padding: 20px; /* Aumenta el espaciado interno */
+  padding: 10px; /* Aumenta el espaciado interno */
   min-width: 300px; /* Ajusta el ancho mínimo de la card */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
 }
 
 .Flag {
-  width: 170px; /* Ajusta el tamaño de las banderas */
+  width: 130px; /* Ajusta el tamaño de las banderas */
   height: auto;
-  margin-right: 15px;
+  margin-right: 20px;
+  margin-bottom: 50px;
 }
 
 .card-content {
@@ -67,10 +69,11 @@ h3 {
 }
 
 .remove-button {
+
   background-color: #ff6347;
   color: white;
   border: none;
-  padding: 8px 15px; /* Aumenta el padding del botón */
+  padding: 6px 5px; /* Aumenta el padding del botón */
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
