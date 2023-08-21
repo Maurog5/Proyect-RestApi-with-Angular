@@ -43,6 +43,7 @@
   
   .about-image {
     border-radius: 10px;
+    align-items: flex-end;
   }
 
 
