@@ -11,7 +11,7 @@ export class AboutComponent {
   constructor(private router: Router) {}
 
   goToHome() {
-    this.router.navigate(['/home']); // Navegar a la página de inicio
+    this.router.navigate(['/home']); 
   }
 
 }

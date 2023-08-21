@@ -1,29 +1,26 @@
-<div class="cont-page">
-    <h1 class="title"> CREATE YOUR COUNTRY </h1> 
-    <div class="container">
-      <form [formGroup]="countryForm" (ngSubmit)="createCountry()">
-        <ul class="flex-outer">
-          <li>
-            <label for="name">Name</label>
-            <input type="text" id="name" formControlName="name" placeholder="Enter your pais here">
-          </li>
-          <li>
-            <label for="capital">Capital</label>
-            <input type="text" id="capital" formControlName="capital" placeholder="Enter your capital here">
-          </li>
-          <li>
-              <label for="population">Population</label>
-            <input type="text" id="population" formControlName="population" placeholder="Enter your population here">
-          </li>
-          <li>
-          </li>
-          <li>
-            <label for="image">Image</label>
-            <input type="file" id="image" (change)="onImageChange($event)" accept="image/*">
-            <button type="submit">Submit</button>
-          </li>
-        </ul>
-      </form>
-    </div>
-  </div>
-  
+<div class="cont-page "> <!-- Agrega la clase de color de fondo aquí -->
+  <h1 class="title">CREATE YOUR COUNTRY</h1>
+  <div class="container ">
+    <form  [formGroup]="countryForm " (ngSubmit)="createCountry()">
+      <ul class="list-group ">
+        <li class="list-group-item bg-dark">
+          <label for="name" class="text-white">Name</label>
+          <input type="text" id="name" formControlName="name" class="form-control" placeholder="Enter your country name here">
+        </li>
+        <li class="list-group-item bg-dark">
+          <label for="capital" class="text-white">Capital</label>
+          <input type="text" id="capital" formControlName="capital" class="form-control" placeholder="Enter your capital here">
+        </li>
+        <li class="list-group-item bg-dark">
+          <label for="population" class="text-white">Population</label>
+          <input type="text" id="population" formControlName="population" class="form-control" placeholder="Enter your population here">
+        </li>
+        <li class="list-group-item bg-dark">
+          <label for="image" class="text-white">Image</label>
+          <input type="file" id="image" (change)="onImageChange($event)" accept="image/*" class="form-control-file">
+        </li>
+        <li class="list-group-item bg-dark">
+          <button type="submit" class="btn btn-light" #submitButton>Submit</button>
+          <button class="btn-volver" (click)="goToHome()">Back</button>
+        </li>
+       

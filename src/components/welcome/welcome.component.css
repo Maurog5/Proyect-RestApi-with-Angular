@@ -1,7 +1,7 @@
 /* En el archivo welcome.component.css */
 
 .landingPage {
-    background-image: url("https://previews.123rf.com/images/eyematrix/eyematrix1708/eyematrix170800023/85035691-banderas-de-colores-de-la-ilustraci%C3%B3n-de-fondo-del-mundo.jpg");
+    background-image: url("https://profesorplansdotcom.files.wordpress.com/2018/04/world_flag_map.png");
     background-size: cover; /* Ajustar la imagen para cubrir toda la pantalla */
     background-position: center; /* Centrar la imagen */
     height: 100vh;
@@ -12,7 +12,7 @@
     justify-content: center;
   }
   .landing__box {
-    background-color: #634646f5;
+    background-color: #344d696d;
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);

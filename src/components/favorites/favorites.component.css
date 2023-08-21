@@ -82,3 +82,19 @@ h3 {
 .remove-button:hover {
   background-color: #e74c3c;
 }
+button {
+  background-color: rgba(96, 85, 45, 0.942);
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(139, 120, 51, 0.942);
+}
+.contenedor1 {
+  background-color: #000018;
+}

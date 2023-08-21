@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { IPais } from 'src/app/models/pais.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PaisesService {
+  favorites: any;
   constructor(private http: HttpClient) {}
 
   getPaises() {
@@ -23,5 +25,11 @@ export class PaisesService {
       })
     );
     
+  }
+  updateFavorite(updatedCountry: IPais): void {
+    const index = this.favorites.findIndex((country: { id: string; }) => country.id === updatedCountry.id);
+    if (index !== -1) {
+      this.favorites[index] = updatedCountry;
+    }
   }
 }

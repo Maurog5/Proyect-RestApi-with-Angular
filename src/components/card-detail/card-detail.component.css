@@ -123,7 +123,6 @@ h5 {
 }
 
 
-
 /* Estilos para el botón de corazón */
 .heart-button {
   border: none;
@@ -141,13 +140,12 @@ h5 {
 }
 
 .fa-heart {
-  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease; /* Elimina la transición de color */
   border: 3px solid transparent;
 }
 
-
 .favorited-heart {
-  border-color: #f90909;
+  border-color: #f90909; /* Borde rojo cuando está marcado como favorito */
 }
 
 

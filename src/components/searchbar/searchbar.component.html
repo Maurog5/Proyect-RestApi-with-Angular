@@ -12,9 +12,10 @@
         </div>
         <img [src]="result.flags.png" alt="{{ result.name.common }} Flag" class="Flag" />
         <button class="heart-button" (click)="toggleFavorite(result)">
-          <i class="fa fa-heart" [ngClass]="{'favorited': result.favorite}"></i>
+          <i class="fa fa-heart" [ngClass]="{'favorited-heart': result.favorite}"></i>
           ❤️
         </button>
+        
         <h1>Name: {{ result.name.common }}</h1>
         <h1>Capital: {{ result.capital }}</h1>
         <h1>Population: {{ result.population }}</h1>

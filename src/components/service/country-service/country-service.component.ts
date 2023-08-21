@@ -11,6 +11,11 @@ export class CountryServiceComponent {
   addCountry(country: IPais): void {
     this.countries.push(country); 
   }
-
-  
+  updateCountry(updatedCountry: IPais): void {
+    const index = this.countries.findIndex(country => country.id === updatedCountry.id);
+    if (index !== -1) {
+      this.countries[index] = updatedCountry;
+    }
+  }
+  // Agrega métodos adicionales según sea necesario, por ejemplo para obtener los países favoritos, etc.
 }

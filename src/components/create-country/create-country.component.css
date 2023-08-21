@@ -1,15 +1,19 @@
 .cont-page {
-  background-color: rgb(31, 33, 88);
   color: aliceblue;
   width: 100%;
   min-height: 100vh;
+  background-image: url("https://fondosmil.com/fondo/71506.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
+
 
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(147, 82, 24, 0.8);
+
   border-radius: 10px;
 }
 
@@ -61,4 +65,18 @@
     display: flex;
     align-items: center;
    
+}
+button {
+  background-color: #223d9f;
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #00b306; 
 }
