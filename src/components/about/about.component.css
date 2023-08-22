@@ -1,62 +1,67 @@
 .page-container-about {
-    background-color: hsl(210, 29%, 8%); 
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; 
-  }
-  
-  .about-content {
-    color: aliceblue;
-  }
-  
-  .about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-left: 20px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  .image-container {
-    position: absolute;
-    top: 20px; 
-    right: 20px; 
-  }
-  
-  .about-image {
-    border-radius: 10px;
-    align-items: flex-end;
-  }
+  background-color: hsl(210, 29%, 8%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Cambiado a flex-direction columna */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
+.about-content {
+  color: aliceblue;
+  text-align: center; /* Centrado del texto */
+  padding: 20px; /* Agregado espaciado */
+}
 
-  button {
-    background-color: #04172c;
-    color: white; 
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3; 
-  }
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrado horizontal */
+  max-width: 800px;
+  margin: 10px auto 200px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px; /* Agregado margen inferior al texto */
+}
+
+.image-container {
+  position: relative; /* Cambiado a relativo */
+  width: 100%;
+  max-width: 800px;
+}
+
+.about-image {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+button {
+  background-color: #04172c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%; /* Botones ocupan todo el ancho */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
