@@ -7,10 +7,10 @@ import { FavoritesComponent } from 'src/components/favorites/favorites.component
 import { CreateCountryComponent} from '../components/create-country/create-country.component'
 import { EditCountryComponent } from 'src/components/edit-country/edit-country.component';
 const routes: Routes = [
-  { path: '', redirectTo: '/welcome', pathMatch: 'full' }, // Ruta raíz redirige a '/home'
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' }, 
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'home', component: HomeComponent }, // Ruta para el componente AppComponent
-  { path: 'about', component: AboutComponent }, // Ruta para el componente AboutComponent
+  { path: 'home', component: HomeComponent }, 
+  { path: 'about', component: AboutComponent }, 
   { path: 'favorites', component: FavoritesComponent },
   { path: 'create', component:  CreateCountryComponent },
   { path: 'edit-country/:id', component: EditCountryComponent }

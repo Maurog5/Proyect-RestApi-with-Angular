@@ -1,5 +1,5 @@
 import { Component, OnInit,ChangeDetectorRef  } from '@angular/core';
-import { FavoritesService } from '../service/favorites-service/favorites-service.component'; // Importa el servicio FavoritesService
+import { FavoritesService } from '../service/favorites-service/favorites-service.component'; 
 import { IPais } from '../../app/models/pais.model';
 import { Router } from '@angular/router';
 
@@ -27,7 +27,7 @@ export class FavoritesComponent implements OnInit {
     removeFromFavorites(pais: IPais): void {
       this.favoritesService.removeFromFavorites(pais);
     
-      // Obtén la lista actualizada de favoritos desde el servicio
+     
       const updatedFavorites = this.favoritesService.getFavorites();
     
       // Actualiza la lista de favoritos en el servicio
@@ -36,7 +36,7 @@ export class FavoritesComponent implements OnInit {
       // Actualiza la referencia en el componente
       this.favoritos = updatedFavorites;
     
-      this.cdr.detectChanges(); // Forzar la detección de cambios
+      this.cdr.detectChanges(); //fuerza la detencion de cambioss
     }
 
   

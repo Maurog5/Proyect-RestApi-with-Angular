@@ -34,7 +34,7 @@ export class CreateCountryComponent {
 
  
   preFillForm(country: IPais) {
-    this.editingCountry = country; // Guarda el país en edición
+    this.editingCountry = country; 
     this.countryForm.patchValue({
       name: country.name.common,
       capital: country.capital,

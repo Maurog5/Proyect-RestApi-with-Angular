@@ -1,7 +1,7 @@
 
 
 .row {
-  padding: 50px;
+  padding: 10px;
   border-radius: 10px;
   background-color: #384b89;
 }
@@ -11,16 +11,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0px;
+  margin-top: 5px;
 
 }
 
 /* Estilo para los elementos de la lista de páginas */
 .page-item {
   margin: 0 3px;
-  padding: 5px 5px 5px 5px; /* Ajusta el padding para hacer los botones más grandes */
+  padding: 5px 5px 5px 5px; 
   cursor: pointer;
-  font-size: 14px; /* Ajusta el tamaño de la fuente para los números */
+  font-size: 14px;
 
 }
 
@@ -43,8 +43,8 @@
 .pagination .page-link.active {
   border-radius: 40px;
   padding: 2px 2px 2px 2px;
-  background-color: #80dd4e; /* Color de fondo */
-  color: rgb(14, 11, 11); /* Color del texto */
+  background-color: #80dd4e; 
+  color: rgb(14, 11, 11); 
  
 
 }

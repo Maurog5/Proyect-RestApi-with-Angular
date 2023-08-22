@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PaisesService } from '../../components/service/paises.service'; // Importa el servicio correcto
-import { FavoritesService } from '../../components/service/favorites-service/favorites-service.component'; // Importa el nuevo servicio
+import { PaisesService } from '../../components/service/paises.service';
+import { FavoritesService } from '../../components/service/favorites-service/favorites-service.component'; 
 import { IPais } from '../../app/models/pais.model';
 
 @Component({
@@ -13,12 +13,12 @@ export class SearchBarComponent implements OnInit {
   searchText2: string = '';
   searchResults: IPais[] = [];
 
-  constructor(private paisesService: PaisesService, private favoritesService: FavoritesService) {} // Inyecta ambos servicios
+  constructor(private paisesService: PaisesService, private favoritesService: FavoritesService) {} // Inyecto ambos servicios
 
   ngOnInit() {}
 
   onSearch() {
-    this.paisesService.getPaises().subscribe((data: IPais[]) => { // Usa el servicio paisesService
+    this.paisesService.getPaises().subscribe((data: IPais[]) => { 
       this.searchResults = data.filter(pais =>
         pais.name.common.toLowerCase().includes(this.searchText1.toLowerCase()) 
       );
