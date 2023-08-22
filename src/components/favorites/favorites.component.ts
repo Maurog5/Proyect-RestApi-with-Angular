@@ -41,10 +41,9 @@ export class FavoritesComponent implements OnInit {
 
   
 
-  editCountry(country: IPais): void {
-    this.router.navigate(['/edit', country.id]);
-    this.cdr.detectChanges(); // Forzar la detección de cambios
-  }
+    editCountry(pais: IPais): void {
+      this.router.navigate(['/edit-country', pais.id]); 
+    }
   
   
   

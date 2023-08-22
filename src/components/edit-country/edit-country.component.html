@@ -1,1 +1,34 @@
-<p>edit-country works!</p>
+<div class="cont-page">
+    <h1 class="title">EDIT COUNTRY</h1>
+    <div class="container">
+      <form [formGroup]="countryForm" (ngSubmit)="updateCountry()">
+        <ul class="list-group">
+          <li class="list-group-item bg-dark">
+            <label for="name" class="text-white">Name</label>
+            <input type="text" id="name" formControlName="name" class="form-control" placeholder="Enter your country name here">
+            <div *ngIf="countryForm.get('name')?.hasError('maxlength')" class="text-danger">
+              Name cannot exceed 10 characters.
+            </div>
+          </li>
+          <li class="list-group-item bg-dark">
+            <label for="capital" class="text-white">Capital</label>
+            <input type="text" id="capital" formControlName="capital" class="form-control" placeholder="Enter your capital here">
+            <div *ngIf="countryForm.get('capital')?.hasError('maxlength')" class="text-danger">
+              Capital cannot exceed 10 characters.
+            </div>
+          </li>
+          <li class="list-group-item bg-dark">
+            <label for="population" class="text-white">Population</label>
+            <input type="number" id="population" formControlName="population" class="form-control">
+          </li>
+       
+          <li class="list-group-item bg-dark">
+           
+            <button type="submit" class="btn btn-primary">Update Country</button>
+            <button type="button" class="btn btn-secondary" (click)="cancelEdit()">Cancel</button>
+          </li>
+          <button class="btn-volver" (click)="goToHome()">Back</button>
+        </ul>
+      </form>
+    </div>
+  </div>

@@ -22,8 +22,8 @@ export class CreateCountryComponent {
     private router: Router
   ) {
     this.countryForm = this.fb.group({
-      name: ['', Validators.required],
-      capital: [''],
+      name: ['', [Validators.required, Validators.maxLength(10)]],
+      capital: ['', [Validators.required, Validators.maxLength(10)]],
       population: ['']
     });
   }
@@ -32,7 +32,7 @@ export class CreateCountryComponent {
     this.router.navigate(['/home']);
   }
 
-  // Prellenar el formulario con datos del país a editar
+ 
   preFillForm(country: IPais) {
     this.editingCountry = country; // Guarda el país en edición
     this.countryForm.patchValue({

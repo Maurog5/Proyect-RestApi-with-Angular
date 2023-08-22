@@ -6,10 +6,16 @@
         <li class="list-group-item bg-dark">
           <label for="name" class="text-white">Name</label>
           <input type="text" id="name" formControlName="name" class="form-control" placeholder="Enter your country name here">
+          <div *ngIf="countryForm.get('name')?.hasError('maxlength')" class="text-danger">
+            Name cannot exceed 10 characters.
+          </div>
         </li>
         <li class="list-group-item bg-dark">
           <label for="capital" class="text-white">Capital</label>
           <input type="text" id="capital" formControlName="capital" class="form-control" placeholder="Enter your capital here">
+          <div *ngIf="countryForm.get('capital')?.hasError('maxlength')" class="text-danger">
+            Capital cannot exceed 10 characters.
+          </div>
         </li>
         <li class="list-group-item bg-dark">
           <label for="population" class="text-white">Population</label>
@@ -17,14 +23,16 @@
         </li>
         <li class="list-group-item bg-dark">
           <label for="image" class="text-white">Image</label>
-          <input type="file" id="image" (change)="onImageChange($event)" accept="image/*" class="form-control-file">
+          <input type="file" id="image" (change)="onImageChange($event)" accept="image/*" class="form-control-file" required>
+          <div *ngIf="countryForm.get('image')?.invalid && countryForm.get('image')?.touched" class="text-danger">
+            Please select an image.
+          </div>
+          <img *ngIf="selectedImage" [src]="selectedImageURL" alt="Selected Image">
         </li>
+        
         <li class="list-group-item bg-dark">
-          <label class="text-white">selected image:</label>
-          <img *ngIf="selectedImage" [src]="selectedImageURL" alt="Imagen seleccionada">
+          <button type="submit" class="btn btn-light" #submitButton [disabled]="!countryForm.valid || countryForm.get('image')?.invalid">Submit</button>
+ 
         </li>
-        <li class="list-group-item bg-dark">
-          <button type="submit" class="btn btn-light" #submitButton>Submit</button>
-          <button class="btn-volver" (click)="goToHome()">Back</button>
-        </li>
+        <button class="btn-volver" (click)="goToHome()">Back</button>
        
