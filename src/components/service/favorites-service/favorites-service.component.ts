@@ -34,7 +34,7 @@ export class FavoritesService {
   }
 
   removeFromFavorites(pais: IPais): void {
-    const index = this.favoritos.findIndex(f => f.name.common === pais.name.common);
+    const index = this.favoritos.findIndex(f => f.name?.common === pais.name?.common);
     if (index !== -1) {
       this.favoritos.splice(index, 1);
       this.saveToLocalStorage();
